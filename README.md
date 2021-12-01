@@ -6,6 +6,6 @@
     - ATmega32A microcontroller 
     - 2*16 Lcd
     - Keypad
-      with the help of the internal EEPROM of ATmega32A
+    with the help of the internal EEPROM of ATmega32A
   ## Youtube preview:
     
