@@ -30,7 +30,7 @@ void Keypad_vInit()
 // The function which loops on the keypad buttons to check which one is pressed!
 char keypad_u8CheckPress()
 {
-	char arr[4][4] = {{'1','2','3','/'},{'4','5','6','*'},{'7','8','9','-'},{'A','0','=','+'}};
+	char arr[4][4] = {{'7','8','9','/'},{'4','5','6','*'},{'1','2','3','-'},{'A','0','=','+'}};
 	char row, coloumn, x;
 	char returnval = NOTPRESSED;
 	for(row=0; row<4; row++)
