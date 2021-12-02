@@ -173,7 +173,7 @@ int main(void)
 			LCD_vSend_String("Safe Opened");
 			_delay_ms(1000);
 			LCD_vClearScreen();
-			LCD_vSend_String("Welcome Ahmed!");
+			LCD_vSend_String("Welcome Maged!");
 			flag =1;
 		}
 		/*
