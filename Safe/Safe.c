@@ -201,11 +201,8 @@ void Check_Setting_Flag()
 			setting_flag = 0;
 			break;
 		}
-		else 
-		{
-			setting_flag = 1;
-			break;
-		}
+		
+		setting_flag = 1;
 	}
 	//If the repeated password same as the first taken one, the password will be saved in EEPROM
 	if(setting_flag==1)
