@@ -109,10 +109,26 @@ void Set_Pass()
 		{
 			set[i] = keypad_u8CheckPress();
 		}while(set[i]==NOTPRESSED);
-		LCD_vSend_Char(set[i]);
-		_delay_ms(500);
-		LCD_vMoveCursor(1,10+i);
-		LCD_vSend_Char('*');
+		// Delete last character
+		if(set[i] == 'A')
+		{
+			if(i>=1)// This condition to prevent trying delete char, which is not exists yet.
+			{
+				i--;// This decrement for the cursor to delete the last char not to delete the char where it is.  
+				LCD_vMoveCursor(1,10+i);
+				LCD_vSend_Char(' ');
+				_delay_ms(400);
+				LCD_vMoveCursor(1,10+i);
+				i--;// This decrement to overwrite set[i].
+			}				
+		}
+		else
+		{
+			LCD_vSend_Char(set[i]);
+			_delay_ms(400);
+			LCD_vMoveCursor(1,10+i);
+			LCD_vSend_Char('*');	
+		}
 	}
 }
 //This function asks the user to repeat the same password he has set
@@ -126,10 +142,26 @@ void Repeat_Pass()
 		{
 			repeat[i] = keypad_u8CheckPress();
 		}while(repeat[i]==NOTPRESSED);
-		LCD_vSend_Char(repeat[i]);
-		_delay_ms(500);
-		LCD_vMoveCursor(1,13+i);
-		LCD_vSend_Char('*');
+		// Delete last character
+		if(repeat[i] == 'A')
+		{
+			if(i>=1)// This condition to prevent trying delete char, which is not exists yet.
+			{
+				i--;// This decrement for the cursor to delete the last char not to delete the char where it is.
+				LCD_vMoveCursor(1,13+i);
+				LCD_vSend_Char(' ');
+				_delay_ms(400);
+				LCD_vMoveCursor(1,13+i);
+				i--;// This decrement to overwrite set[i].
+			}
+		}
+		else
+		{
+			LCD_vSend_Char(repeat[i]);
+			_delay_ms(400);
+			LCD_vMoveCursor(1,13+i);
+			LCD_vSend_Char('*');
+		}		
 	}
 }
 /*
@@ -146,10 +178,26 @@ void Check_Pass()
 		{
 			arr[i] = keypad_u8CheckPress();
 		}while(arr[i]==NOTPRESSED);
-		LCD_vSend_Char(arr[i]);
-		_delay_ms(500);
-		LCD_vMoveCursor(1,12+i);
-		LCD_vSend_Char('*');
+		// Delete last character
+		if(arr[i] == 'A')
+		{
+			if(i>=1)// This condition to prevent trying delete char, which is not exists yet.
+			{
+				i--;// This decrement for the cursor to delete the last char not to delete the char where it is.
+				LCD_vMoveCursor(1,12+i);
+				LCD_vSend_Char(' ');
+				_delay_ms(400);
+				LCD_vMoveCursor(1,12+i);
+				i--;// This decrement to overwrite set[i].
+			}
+		}
+		else
+		{
+			LCD_vSend_Char(arr[i]);
+			_delay_ms(500);
+			LCD_vMoveCursor(1,12+i);
+			LCD_vSend_Char('*');
+		}		
 	}		
 	
 	int correctFlag =1;
