@@ -9,6 +9,15 @@
 #include "LCD.h"
 #include "EEPROM.h"
 #include "Safe.h"
+char arr[PASSWORD_LENGTH];
+char set[PASSWORD_LENGTH];
+char repeat[PASSWORD_LENGTH];
+char setting_tries = MAX_TRIES;
+char check_tries = MAX_TRIES;
+char pressed_value = NOTPRESSED;
+char i,flag;
+char Check_flag=0;
+char setting_flag;
 int main(void)
 {
 	Keypad_vInit();
