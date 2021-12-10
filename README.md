@@ -12,6 +12,7 @@
     - EEPROM 
   ## Youtube preview:
   ###Software:
-   https://youtu.be/edEhKxFoX8A
+    https://youtu.be/edEhKxFoX8A
+   
   ###Hardware:
-   https://youtu.be/mX4ITjUyZhE
+    https://youtu.be/mX4ITjUyZhE
