@@ -11,7 +11,7 @@
     - DIO
     - EEPROM 
   ## Youtube preview:
-  ### Software:
+  ### Proteus:
    https://youtu.be/edEhKxFoX8A
    
   ### Hardware:
